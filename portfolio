@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md Siyam Sheikh Kayesh - STR Assistant Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .bg-mesh {
+      background-color: #0f172a;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.25) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.2) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.2) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(245, 158, 11, 0.2) 0px, transparent 50%);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-800 antialiased min-h-screen relative overflow-x-hidden">
+
+  <!-- Background Mesh Texture -->
+  <div class="fixed inset-0 bg-mesh -z-10 pointer-events-none"></div>
+
+  <!-- Header -->
+  <header class="max-w-6xl mx-auto px-6 pt-10 pb-4 flex justify-between items-center text-white">
+    <div>
+      <h1 class="text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-sky-400 to-indigo-400">
+        Md Siyam Sheikh Kayesh
+      </h1>
+      <p class="text-teal-300 font-semibold mt-1">Experienced STR Assistant & Property Specialist</p>
+    </div>
+    <a href="mailto:mdsiyamsheikhkayesh567@gmail.com" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-semibold py-2.5 px-5 rounded-full shadow-lg shadow-teal-500/20 transition-all transform hover:-translate-y-0.5">
+      <i class="fa-solid fa-envelope me-1"></i> Get In Touch
+    </a>
+  </header>
+
+  <!-- Main Container -->
+  <main class="max-w-6xl mx-auto px-6 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+    <!-- Profile Sidebar -->
+    <aside class="lg:col-span-4">
+      <div class="glass-card rounded-3xl p-6 shadow-2xl relative overflow-hidden flex flex-col items-center text-center">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-teal-400 to-emerald-400 rounded-bl-full opacity-20 -z-10"></div>
+        
+        <!-- Smaller & Editable Profile Picture Container -->
+        <div class="relative w-36 h-36 rounded-full overflow-hidden shadow-lg mb-4 border-4 border-white bg-slate-200 group cursor-pointer">
+          <img 
+            id="profileImg"
+            src="../Pictures/profile.png" 
+            alt="Md Siyam Sheikh Kayesh" 
+            class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            onerror="this.onerror=null; this.parentElement.querySelector('div').style.display='flex'; this.style.display='none';"
+          >
+          
+          <!-- Fallback user icon if image fails -->
+          <div class="hidden w-full h-full flex-col items-center justify-center bg-slate-800 text-slate-400 p-2 text-center">
+            <i class="fa-solid fa-user text-4xl mb-1 text-teal-400"></i>
+          </div>
+
+          <!-- Edit Overlay (Triggers Image Upload) -->
+          <label for="imageUpload" class="absolute inset-0 bg-slate-900/60 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200 cursor-pointer text-xs font-semibold">
+            <i class="fa-solid fa-camera text-lg mb-1"></i>
+            <span>Change</span>
+          </label>
+          <input type="file" id="imageUpload" accept="image/*" class="hidden" onchange="previewImage(event)">
+        </div>
+
+        <h2 class="text-xl font-bold text-slate-900 mb-1">Md Siyam Sheikh Kayesh</h2>
+        <p class="text-xs text-teal-600 font-semibold mb-6">STR Management Specialist</p>
+
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-2 gap-3 text-center mb-6 w-full">
+          <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/60 shadow-sm">
+            <span class="block text-2xl font-black text-emerald-600">100%</span>
+            <span class="text-xs text-slate-500 font-medium">Guest Satisfaction</span>
+          </div>
+          <div class="p-3 rounded-2xl bg-white/70 border border-slate-200/60 shadow-sm">
+            <span class="block text-2xl font-black text-sky-600">24/7</span>
+            <span class="text-xs text-slate-500 font-medium">Host Support</span>
+          </div>
+        </div>
+
+        <!-- Direct Contact -->
+        <div id="contact" class="bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-2xl p-4 shadow-md w-full text-left">
+          <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold mb-1">Direct Contact</p>
+          <a href="mailto:mdsiyamsheikhkayesh567@gmail.com" class="text-xs sm:text-sm font-semibold text-teal-300 hover:text-teal-200 break-all flex items-center gap-2 transition-colors">
+            <i class="fa-solid fa-envelope text-teal-400"></i> mdsiyamsheikhkayesh567@gmail.com
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Content Section -->
+    <section class="lg:col-span-8 space-y-6">
+
+      <!-- About Me -->
+      <div class="glass-card rounded-3xl p-8 shadow-xl relative overflow-hidden">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="p-3 bg-gradient-to-tr from-teal-500 to-emerald-400 rounded-2xl text-white shadow-md">
+            <i class="fa-solid fa-user-check text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-extrabold text-slate-900">About Me</h2>
+        </div>
+        <p class="text-slate-600 leading-relaxed text-base">
+          I am a dedicated <strong class="text-slate-900 font-semibold">Short-Term Rental (STR) Assistant</strong> with hands-on experience helping hosts maximize rental revenue, streamline operations, and consistently deliver 5-star guest experiences. From optimizing listing descriptions and pricing strategy to managing calendars and handling guest inquiries 24/7, I ensure your properties operate flawlessly.
+        </p>
+      </div>
+
+      <!-- Services Provided -->
+      <div class="glass-card rounded-3xl p-8 shadow-xl">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="p-3 bg-gradient-to-tr from-sky-500 to-indigo-500 rounded-2xl text-white shadow-md">
+            <i class="fa-solid fa-screwdriver-wrench text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-extrabold text-slate-900">Services Provided</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+            <div class="text-sky-500 text-2xl mb-3"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3 class="font-bold text-slate-800 mb-1">Listing Optimization</h3>
+            <p class="text-xs text-slate-500 leading-normal">High-converting titles, optimized descriptions, and dynamic pricing setups.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+            <div class="text-emerald-500 text-2xl mb-3"><i class="fa-solid fa-comments"></i></div>
+            <h3 class="font-bold text-slate-800 mb-1">Guest Communication</h3>
+            <p class="text-xs text-slate-500 leading-normal">Fast response times for inquiries, smooth check-in guides, and support.</p>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+            <div class="text-amber-500 text-2xl mb-3"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3 class="font-bold text-slate-800 mb-1">Calendar & Bookings</h3>
+            <p class="text-xs text-slate-500 leading-normal">Preventing double bookings and syncing multi-platform calendars seamlessly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Currently Managing -->
+      <div class="glass-card rounded-3xl p-8 shadow-xl">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="p-3 bg-gradient-to-tr from-pink-500 to-rose-500 rounded-2xl text-white shadow-md">
+            <i class="fa-solid fa-city text-xl"></i>
+          </div>
+          <h2 class="text-2xl font-extrabold text-slate-900">Currently Managing Properties</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-building"></i>
+            </div>
+            <span class="font-bold text-sm text-slate-700">Boutique City Apartments</span>
+          </div>
+
+          <div class="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-house-chimney-window"></i>
+            </div>
+            <span class="font-bold text-sm text-slate-700">Luxury Villas</span>
+          </div>
+
+          <div class="flex items-center gap-3 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm">
+            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <span class="font-bold text-sm text-slate-700">Cozy Retreats</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-xs text-slate-400 font-medium">
+    <p>© 2026 Md Siyam Sheikh Kayesh. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript to handle local image upload preview -->
+  <script>
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function() {
+        const output = document.getElementById('profileImg');
+        output.src = reader.result;
+        output.style.display = 'block';
+      };
+      if (event.target.files[0]) {
+        reader.readAsDataURL(event.target.files[0]);
+      }
+    }
+  </script>
+
+</body>
+</html>
